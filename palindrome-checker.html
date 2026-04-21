@@ -39,10 +39,12 @@
                 console.log("Yes.");
                 theFeedback.innerHTML ="Error: input is a kitten.";
             }
+             else if(theInput.value == ""){
+                theFeedback.innerHTML = "Fill the form, dumbass.";
+            }
             else if( checkPalindrome(theInput.value) == true){
                 console.log("Yes.");
                 theFeedback.innerHTML = "Oui! " + theInput.value + " is a palindrome";
-        
             }
             else{
                 console.log("no");
@@ -51,6 +53,9 @@
         } //check the texts
 
         function checkPalindrome(str){
+
+            str = str.replaceAll(" ", "");
+
             console.log("palindrome check: " + str);
             let theLetters = str.split("");
             let verLan = theLetters.reverse();
