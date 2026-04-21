@@ -7,6 +7,70 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="ProjectNav"><a href="index.html"></a> home</div>
+    <div id="ProjectNav"><a href="index.html">home</a></div>
+
+    <h1>We can check the words</h1>
+
+
+    <div id="UI">
+        <input type="text" id="inputString" placeholder="back words?">
+        <button id="TheButton">Check</button>
+        <p id="feedback"> le feedback ici!!!!</p>  
+    </div>
+
+    <script>
+        console.clear();
+        console.log("hello world");
+        const theFeedback = document.getElementById("feedback");
+        theFeedback.innerHTML="blabla chaton. aplsidjf";
+
+        const theButton = document.getElementById("TheButton");
+        TheButton.addEventListener("click", checkTheText);
+
+        function checkTheText(){
+            console.log("We are checking");
+
+            const theInput = document.getElementById("inputString");
+            console.log(theInput.value);
+
+            checkPalindrome(theInput.value);
+
+            if( theInput.value =="chaton"){
+                console.log("Yes.");
+                theFeedback.innerHTML ="Error: input is a kitten.";
+            }
+            else if( checkPalindrome(theInput.value) == true){
+                console.log("Yes.");
+                theFeedback.innerHTML = "Oui! " + theInput.value + " is a palindrome";
+        
+            }
+            else{
+                console.log("no");
+                theFeedback.innerHTML = "No.";
+            }
+        } //check the texts
+
+        function checkPalindrome(str){
+            console.log("palindrome check: " + str);
+            let theLetters = str.split("");
+            let verLan = theLetters.reverse();
+            let rts = verLan.join("");
+
+
+       console.log("rts = "+ rts);
+
+
+       if(str == rts){
+            return true;
+       }
+       else{
+        return false;
+       }
+
+        }
+
+
+    </script>
+
 </body>
 </html>

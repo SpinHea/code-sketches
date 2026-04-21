@@ -3,6 +3,7 @@ body{
     background-color:  rgb(246, 162, 201);
     max-width: 400px;
     margin: auto;
+    color: #ffffff;
 }
 *{font-weight: inherit; }
 
