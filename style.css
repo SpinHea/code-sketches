@@ -27,7 +27,7 @@ a{
 a:hover{ background: #ff31d9; color: #ffffff;}
 
 /* gallery */
-.gallery{
+.neirda{
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(
